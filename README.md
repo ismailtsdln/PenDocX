@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.svg" width="200" alt="PenDocX Logo">
+  <img src="assets/logo.svg" width="350" alt="PenDocX Corporate Logo">
 </p>
 
 # PenDocX — Pentest Documentation eXtended
