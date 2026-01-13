@@ -1,20 +1,26 @@
 {
-    "project_name": "PenDocX Enhanced",
+    "project_name": "PenDocX Premium",
     "client_name": "Antigravity",
     "author": "Tester",
-    "start_date": "2026-01-13T10:54:46.996536",
-    "end_date": "2026-01-13T10:55:09.162371",
+    "start_date": "2026-01-13T11:04:12.588570",
+    "end_date": "2026-01-13T11:04:12.834973",
     "test_cases": [
         {
-            "title": "Cross-Site Scripting",
-            "description": "Sample XSS vulnerability.",
-            "impact": "Execution of malicious scripts.",
-            "remediation": "Encode output and use CSP.",
-            "severity": "Medium",
+            "title": "SQL Injection on Login",
+            "description": "Found SQLi in the username field.",
+            "impact": "Full database compromise.",
+            "remediation": "Use parameterized queries.",
+            "severity": "Critical",
+            "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "cvss_score": 9.8,
+            "compliance_mapping": [
+                "A03:2021-Injection",
+                "CWE-89"
+            ],
             "steps_to_reproduce": [],
             "artifacts": [],
-            "created_at": "2026-01-13T10:55:09.162363",
-            "updated_at": "2026-01-13T10:55:09.162367"
+            "created_at": "2026-01-13T11:04:12.834955",
+            "updated_at": "2026-01-13T11:04:12.834961"
         }
     ]
 }

@@ -168,17 +168,15 @@ def list_findings() -> None:
     
     for i, test in enumerate(mission.test_cases, 1):
         color = "white"
-        sev_val = test.severity.value if hasattr(test.severity, 'value') else str(test.severity)
-        
-        if sev_val == "Critical": color = "red"
-        elif sev_val == "High": color = "orange1"
-        elif sev_val == "Medium": color = "yellow"
-        elif sev_val == "Low": color = "green"
+        if test.severity == "Critical": color = "red"
+        elif test.severity == "High": color = "orange1"
+        elif test.severity == "Medium": color = "yellow"
+        elif test.severity == "Low": color = "green"
         
         table.add_row(
             str(i),
             test.title,
-            f"[{color}]{sev_val}[/]",
+            f"[{color}]{test.severity}[/]",
             str(test.cvss_score) if test.cvss_score else "-"
         )
         
@@ -213,9 +211,6 @@ def generate_report(format: str) -> None:
     else:
         from ..reporter.reporters import MarkdownReporter
         reporter = MarkdownReporter()
-
-    if not reporter:
-         raise CLIError(f"Reporter for format '{format}' not implemented.")
         
     with Progress(
         SpinnerColumn(),
