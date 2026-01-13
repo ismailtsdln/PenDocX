@@ -1,0 +1,10 @@
+{
+    "project_name": "PenDocX Enhanced",
+    "client_name": "Antigravity",
+    "version": "1.0.0",
+    "author": "Tester",
+    "base_path": "/Users/ismailtasdelen/Documents/GitHub/PenDocX",
+    "output_dir": "reports",
+    "data_dir": "data",
+    "artifact_dir": "artifacts"
+}

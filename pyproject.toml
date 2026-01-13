@@ -1,0 +1,43 @@
+[project]
+name = "pendocx"
+version = "0.1.0"
+description = "Modern, modular pentest documentation tool."
+authors = [
+    { name = "Ismail Tasdelen", email = "ismailtasdelen@example.com" }
+]
+dependencies = [
+    "click>=8.1.7",
+    "rich>=13.7.0",
+    "python-docx>=1.1.0",
+    "jinja2>=3.1.2",
+    "pydantic>=2.5.2",
+    "pydantic-settings>=2.1.0",
+    "pyyaml>=6.0.1",
+    "cvss>=3.1.0",
+]
+requires-python = ">=3.11"
+
+[project.scripts]
+pendocx = "pendocx.cli:cli"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pendocx*"]
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
